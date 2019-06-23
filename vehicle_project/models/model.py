@@ -7,7 +7,7 @@ import datetime
 from datetime import datetime, timedelta
 from odoo.tools import float_is_zero, float_compare
 
-
+ 
 # import  math
 #
 # class AccountAnalyticLine(models.Model):
@@ -491,7 +491,7 @@ class InheritSale(models.Model):
 #                      'price_unit': line.price_unit, 'tax_id': [(6, 0, tax_list)], 'discount': line.discount,
 #                      'analytic_tag_ids': [(6, 0, analytic_account_tag)]})
                 
-                task.toggle_start()
+#                 task.toggle_start()
                 
                 
 #             view = self.env.ref('project.view_task_form2')
