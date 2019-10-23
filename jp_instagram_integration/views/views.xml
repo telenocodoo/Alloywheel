@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+  
+    <record model="ir.ui.view" id="view_partner_form_instagram">
+        <field name="name">view.partner.form.instagram</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="before">
+                <page name="instagram" string="Instagram">
+                    <header>
+                        <button string="Get Data" type="object" name="getID" context="{'force_update':True}" />
+                        <button string="Clear Data" type="object" name="clear_data" context="{'force_update':True}" />
+                    </header>
+                    <group name="container_row_3">
+                        <group string="User data" name="data" priority="1">
+                                <field name="insta_user"/>
+                                <field name="full_name"/>
+                                <field name="biography"/>
+                                <field name="external_url" widget="url"/>
+                        </group>
+                        <group string="Information" name="info" priority="2">
+                                <field name="followed_by"/>
+                                <field name="timeline_media"/>
+                                <field name="type_scrape" required="1"/>
+                                <label for="engagement_rate"/>
+                                <div>
+                                    <field name="engagement_rate" class="oe_inline"/>
+                                    <span class="o_form_label oe_inline">%</span>
+                                </div>
+                                <label for="engagement_rate_ha"/>
+                                <div>
+                                    <field name="engagement_rate_ha" class="oe_inline"/>
+                                    <span class="o_form_label oe_inline">%</span>
+                                </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+  </data>
+</odoo>
